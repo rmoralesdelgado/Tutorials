@@ -1,6 +1,9 @@
 
 # Quick and Easy Setup for Git and GitHub
 
+<h1>Table of Contents<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Objective" data-toc-modified-id="Objective-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Objective</a></span></li><li><span><a href="#Scope" data-toc-modified-id="Scope-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Scope</a></span></li><li><span><a href="#Introduction" data-toc-modified-id="Introduction-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Introduction</a></span></li><li><span><a href="#Requirements" data-toc-modified-id="Requirements-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Requirements</a></span></li><li><span><a href="#Setting-up-git-for-the-very-first-time" data-toc-modified-id="Setting-up-git-for-the-very-first-time-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Setting up <code>git</code> for the very first time</a></span></li><li><span><a href="#Initializing-git" data-toc-modified-id="Initializing-git-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Initializing <code>git</code></a></span></li><li><span><a href="#Adding-files-and-subfolders" data-toc-modified-id="Adding-files-and-subfolders-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Adding files and subfolders</a></span></li><li><span><a href="#Modifying-added-files-before-committing-and-git-diff" data-toc-modified-id="Modifying-added-files-before-committing-and-git-diff-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>Modifying added files before committing and <code>git diff</code></a></span></li><li><span><a href="#Committing-files-with-git-commit" data-toc-modified-id="Committing-files-with-git-commit-9"><span class="toc-item-num">9&nbsp;&nbsp;</span>Committing files with <code>git commit</code></a></span></li><li><span><a href="#Excluding-objects-with-.gitignore" data-toc-modified-id="Excluding-objects-with-.gitignore-10"><span class="toc-item-num">10&nbsp;&nbsp;</span>Excluding objects with <code>.gitignore</code></a></span></li><li><span><a href="#Making-more-commits-and-git-log" data-toc-modified-id="Making-more-commits-and-git-log-11"><span class="toc-item-num">11&nbsp;&nbsp;</span>Making more commits and <code>git log</code></a></span></li><li><span><a href="#Creating-a-repository-on-GitHub" data-toc-modified-id="Creating-a-repository-on-GitHub-12"><span class="toc-item-num">12&nbsp;&nbsp;</span>Creating a repository on GitHub</a></span></li><li><span><a href="#Setting-up-the-remote-repository" data-toc-modified-id="Setting-up-the-remote-repository-13"><span class="toc-item-num">13&nbsp;&nbsp;</span>Setting up the remote repository</a></span></li><li><span><a href="#Pushing-and-pulling" data-toc-modified-id="Pushing-and-pulling-14"><span class="toc-item-num">14&nbsp;&nbsp;</span>Pushing and pulling</a></span></li><li><span><a href="#Rebasing-with-git-pull---rebase" data-toc-modified-id="Rebasing-with-git-pull---rebase-15"><span class="toc-item-num">15&nbsp;&nbsp;</span>Rebasing with <code>git pull --rebase</code></a></span></li><li><span><a href="#Knowing-which-branches-are-being-tracked" data-toc-modified-id="Knowing-which-branches-are-being-tracked-16"><span class="toc-item-num">16&nbsp;&nbsp;</span>Knowing which branches are being tracked</a></span></li><li><span><a href="#Merge-commits-and-setting-up-the-upstream-branches" data-toc-modified-id="Merge-commits-and-setting-up-the-upstream-branches-17"><span class="toc-item-num">17&nbsp;&nbsp;</span>Merge-commits and setting up the <code>upstream</code> branches</a></span></li><li><span><a href="#Knowing-what-is-being-tracked-and-filtering-files-by-their-status" data-toc-modified-id="Knowing-what-is-being-tracked-and-filtering-files-by-their-status-18"><span class="toc-item-num">18&nbsp;&nbsp;</span>Knowing what is being tracked and filtering files by their status</a></span></li></ul></div>
+
 ## Objective
 The objective of this notebook is to provide an easy and quick setup guide for both Git and GitHub — making them both work together — and to give some simple and core understanding of `git` itself.
 
@@ -66,7 +69,7 @@ filter.lfs.required=true
 
 Much more detailed information about this initial setup [here](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup). Just one important thing to note in case you are not checking out the previous link, is that `git` stores configuration at three different levels: repo-level, user-level and system-level. The `--global` flag allows to modify the user-level configuration.
 
-# Initializing `git`
+## Initializing `git`
 
 Say you already have some material you want to showcase on GitHub. Of course, you can always upload files to a GitHub repository manually and you can grant public access to it so that everyone can see what you have uploaded. However, thinking long-term, you might want to keep on improving these projects, or maybe add new projects to this folder in your computer, your "Projects" folder. In this case, the idea of manually uploading files — and subdirectories — is out of the question. You *will* want to work on your projects locally and `push` them to your GitHub account every time you have made some considerable improvements/additions.
 
@@ -906,5 +909,13 @@ You can find the glossary definitions of both `HEAD` and `heads` [here](https://
 
 
 ```python
-!!jupyter nbconvert --to markdown 'Quick and Easy Setup for Git and GitHub.ip'
+!!jupyter nbconvert --to markdown 'Quick and Easy Setup for Git and GitHub.ipynb'
 ```
+
+
+
+
+    ['[NbConvertApp] Converting notebook Quick and Easy Setup for Git and GitHub.ipynb to markdown',
+     '[NbConvertApp] Writing 61734 bytes to Quick and Easy Setup for Git and GitHub.md']
+
+

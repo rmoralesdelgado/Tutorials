@@ -2,32 +2,37 @@
 # Quick and Easy Setup for Git and GitHub
 
 <h1>Table of Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Objective" data-toc-modified-id="Objective-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Objective</a></span></li><li><span><a href="#Scope" data-toc-modified-id="Scope-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Scope</a></span></li><li><span><a href="#Introduction" data-toc-modified-id="Introduction-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Introduction</a></span></li><li><span><a href="#Requirements" data-toc-modified-id="Requirements-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Requirements</a></span></li><li><span><a href="#Setting-up-git-for-the-very-first-time" data-toc-modified-id="Setting-up-git-for-the-very-first-time-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Setting up <code>git</code> for the very first time</a></span></li><li><span><a href="#Initializing-git" data-toc-modified-id="Initializing-git-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Initializing <code>git</code></a></span></li><li><span><a href="#Adding-files-and-subfolders" data-toc-modified-id="Adding-files-and-subfolders-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Adding files and subfolders</a></span></li><li><span><a href="#Modifying-added-files-before-committing-and-git-diff" data-toc-modified-id="Modifying-added-files-before-committing-and-git-diff-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>Modifying added files before committing and <code>git diff</code></a></span></li><li><span><a href="#Committing-files-with-git-commit" data-toc-modified-id="Committing-files-with-git-commit-9"><span class="toc-item-num">9&nbsp;&nbsp;</span>Committing files with <code>git commit</code></a></span></li><li><span><a href="#Excluding-objects-with-.gitignore" data-toc-modified-id="Excluding-objects-with-.gitignore-10"><span class="toc-item-num">10&nbsp;&nbsp;</span>Excluding objects with <code>.gitignore</code></a></span></li><li><span><a href="#Making-more-commits-and-git-log" data-toc-modified-id="Making-more-commits-and-git-log-11"><span class="toc-item-num">11&nbsp;&nbsp;</span>Making more commits and <code>git log</code></a></span></li><li><span><a href="#Creating-a-repository-on-GitHub" data-toc-modified-id="Creating-a-repository-on-GitHub-12"><span class="toc-item-num">12&nbsp;&nbsp;</span>Creating a repository on GitHub</a></span></li><li><span><a href="#Setting-up-the-remote-repository" data-toc-modified-id="Setting-up-the-remote-repository-13"><span class="toc-item-num">13&nbsp;&nbsp;</span>Setting up the remote repository</a></span></li><li><span><a href="#Pushing-and-pulling" data-toc-modified-id="Pushing-and-pulling-14"><span class="toc-item-num">14&nbsp;&nbsp;</span>Pushing and pulling</a></span></li><li><span><a href="#Rebasing-with-git-pull---rebase" data-toc-modified-id="Rebasing-with-git-pull---rebase-15"><span class="toc-item-num">15&nbsp;&nbsp;</span>Rebasing with <code>git pull --rebase</code></a></span></li><li><span><a href="#Knowing-which-branches-are-being-tracked" data-toc-modified-id="Knowing-which-branches-are-being-tracked-16"><span class="toc-item-num">16&nbsp;&nbsp;</span>Knowing which branches are being tracked</a></span></li><li><span><a href="#Merge-commits-and-setting-up-the-upstream-branches" data-toc-modified-id="Merge-commits-and-setting-up-the-upstream-branches-17"><span class="toc-item-num">17&nbsp;&nbsp;</span>Merge-commits and setting up the <code>upstream</code> branches</a></span></li><li><span><a href="#Knowing-what-is-being-tracked-and-filtering-files-by-their-status" data-toc-modified-id="Knowing-what-is-being-tracked-and-filtering-files-by-their-status-18"><span class="toc-item-num">18&nbsp;&nbsp;</span>Knowing what is being tracked and filtering files by their status</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#1.-Objective" data-toc-modified-id="1.-Objective-1">1. Objective</a></span></li><li><span><a href="#2.-Scope" data-toc-modified-id="2.-Scope-2">2. Scope</a></span></li><li><span><a href="#3.-Introduction" data-toc-modified-id="3.-Introduction-3">3. Introduction</a></span></li><li><span><a href="#4.-Requirements" data-toc-modified-id="4.-Requirements-4">4. Requirements</a></span></li><li><span><a href="#5.-Setting-up-git-for-the-very-first-time" data-toc-modified-id="5.-Setting-up-git-for-the-very-first-time-5">5. Setting up <code>git</code> for the very first time</a></span></li><li><span><a href="#6.-Initializing-git" data-toc-modified-id="6.-Initializing-git-6">6. Initializing <code>git</code></a></span></li><li><span><a href="#7.-Adding-files-and-subfolders-with-git-add" data-toc-modified-id="7.-Adding-files-and-subfolders-with-git-add-7">7. Adding files and subfolders with <code>git add</code></a></span></li><li><span><a href="#8.-Modifying-added-files-before-committing-and-git-diff" data-toc-modified-id="8.-Modifying-added-files-before-committing-and-git-diff-8">8. Modifying added files before committing and <code>git diff</code></a></span></li><li><span><a href="#9.-Committing-files-with-git-commit" data-toc-modified-id="9.-Committing-files-with-git-commit-9">9. Committing files with <code>git commit</code></a></span></li><li><span><a href="#10.-Excluding-objects-with-.gitignore" data-toc-modified-id="10.-Excluding-objects-with-.gitignore-10">10. Excluding objects with <code>.gitignore</code></a></span></li><li><span><a href="#11.-Making-more-commits-and-git-log" data-toc-modified-id="11.-Making-more-commits-and-git-log-11">11. Making more commits and <code>git log</code></a></span></li><li><span><a href="#12.-Creating-a-repository-on-GitHub" data-toc-modified-id="12.-Creating-a-repository-on-GitHub-12">12. Creating a repository on GitHub</a></span></li><li><span><a href="#13.-Setting-up-the-remote-repository-with-git-remote" data-toc-modified-id="13.-Setting-up-the-remote-repository-with-git-remote-13">13. Setting up the remote repository with <code>git remote</code></a></span></li><li><span><a href="#14.-Pushing-and-pulling-with-git-push-and-git-pull" data-toc-modified-id="14.-Pushing-and-pulling-with-git-push-and-git-pull-14">14. Pushing and pulling with <code>git push</code> and <code>git pull</code></a></span></li><li><span><a href="#15.-Rebasing-with-git-pull---rebase" data-toc-modified-id="15.-Rebasing-with-git-pull---rebase-15">15. Rebasing with <code>git pull --rebase</code></a></span></li><li><span><a href="#16.-Knowing-which-branches-are-being-tracked" data-toc-modified-id="16.-Knowing-which-branches-are-being-tracked-16">16. Knowing which branches are being tracked</a></span></li><li><span><a href="#17.-Merge-commits-and-setting-up-the-upstream-branches" data-toc-modified-id="17.-Merge-commits-and-setting-up-the-upstream-branches-17">17. Merge-commits and setting up the <code>upstream</code> branches</a></span><ul class="toc-item"><li><span><a href="#17.1-Modifying-some-files-locally-and-remotely" data-toc-modified-id="17.1-Modifying-some-files-locally-and-remotely-17.1">17.1 Modifying some files locally and remotely</a></span></li><li><span><a href="#17.2-Merge-commits" data-toc-modified-id="17.2-Merge-commits-17.2">17.2 Merge-commits</a></span></li><li><span><a href="#17.3-Setting-up-the-upstream-branches" data-toc-modified-id="17.3-Setting-up-the-upstream-branches-17.3">17.3 Setting up the <code>upstream branches</code></a></span></li></ul></li><li><span><a href="#18.-Knowing-which-objects-are-being-tracked-and-filtering-them-by-their-status" data-toc-modified-id="18.-Knowing-which-objects-are-being-tracked-and-filtering-them-by-their-status-18">18. Knowing which objects are being tracked and filtering them by their status</a></span></li></ul></div>
 
-## Objective
-The objective of this notebook is to provide an easy and quick setup guide for both Git and GitHub — making them both work together — and to give some simple and core understanding of `git` itself.
+## 1. Objective
 
-## Scope
-This notebook will only present the basic commands necessary to initialize and control a local (i.e. in your computer) and remote (e.g. in GitHub) repository. There will be no detailed explanation about non-essential `git` commands since there is plenty information out there (including the documentation of `git` itself) nor of branching (this is a slightly more advanced procedure that might be explained in a future notebook).
+The objective of this notebook is to provide an easy and quick setup guide for both Git and GitHub — making them both work together — and to give some simple and core understanding of both tools such that the reader can develop a simple workflow that allows it to integrate `git` and GitHub as part of its everyday tools.
 
-## Introduction
+## 2. Scope
 
-Both Git and GitHub are extremely useful tools for version control and collaborative work. In this sense, the general workflow is for one to work on something locally — either cloned from a GitHub repo or something you made from scratch locally, on your own computer — and then "synchronize" it to GitHub.
+This notebook will only present necessary basic commands to initialize, control and systematically update a local (i.e. in your computer) and a remote (e.g. in GitHub) repository. There will be no detailed explanation about non-essential `git` commands since there is plenty information out there (including the documentation of `git` itself), nor of branching (this is a slightly more advanced procedure that might be explained in a future tutorial).
 
-For the sake of this document, it will be assumed that you're a beginner programmer who wants to start using GitHub repos as a way to showcase projects you have made so far. A GitHub repo can be understood, for the moment, as a folder which contains objects (i.e. files and subfolders). So far, you have a bunch of files and maybe subfolders that you would like to `push` from your local repository (a folder in your local computer) to your GitHub account.
+## 3. Introduction
 
-Fun fact: I made this notebook since *this is me*, a beginner programmer trying to understand how to get `git` and GitHub up and running so I can showcase some projects I've been working on lately. While there is plenty information about `git` — it's mesmerazing how much there is out there about `git` — I had some trouble finding a summarized way to get both `git` and GitHub working seamlessly.
+Both Git and GitHub are extremely useful tools for version control and collaborative work. In this sense, the general workflow is for one to work on something locally using `git` — either cloned from a GitHub repo or something you made from scratch locally, on your own computer — and then to "synchronize" it to GitHub.
 
-## Requirements
-Since this is a very beginner's level guide, the only requirements are the following:
-* Have `git` installed on your computer. MacOS and Linux users rejoice, since it is (most likely) already installed in your computer and is accesible via command line (e.g. Terminal on MacOS). `git` can be downloaded from its own [webpage](https://git-scm.com/downloads]).
-* Have installed a text editor. A text editor for "coding" is of great help since it can help you organize projects, visualize your code better, and so on. Two of the most used are Sublime Text and Atom, although there are dozens out there.
-* Have already created a GitHub account. This will not be explained since creating a GitHub account is pretty rudimentary — just like creating any other type of online account.
-* Have little knowledge about how to use the command line interface (CLI), e.g. Terminal in MacOS.
+For the sake of this document, it will be assumed that you're a beginner programmer who wants to start using GitHub repos as a way to showcase projects you have made so far. A GitHub repo can be understood, for the moment, as a folder which contains objects (i.e. files and subfolders). So far, you have a bunch of files and maybe subfolders that you would like to *push* from your local repository (a folder in your local computer) to your GitHub account.
 
-I am doing this on MacOS, using `bash` version 3.2.57, and Atom.
+**A note from the author**
 
-## Setting up `git` for the very first time
+I made this notebook since, as beginner programmer, trying to understand how to get `git` and GitHub up and running (so I can showcase some projects I've been working on lately) has been a bit of an endeavor. While there is plenty information about `git` — it's mesmerazing how much there is out there about `git` — I had some trouble finding a *summarized* way to get them both working seamlessly. Furthermore, while there are very simple guides to just make them work, what I did not find were the tools to *maintain* them — a set of tools that would allow the programmer to not only set them up, but to create a simple *workflow* such that he or she can keep using them as part of their day-to-day.
+
+## 4. Requirements
+
+Since this is a very beginner-level guide, the only requirements are the following:
+* Have `git` installed on your computer. MacOS and Linux users rejoice, since it is (most likely) already installed in your computer and is accesible via command line (e.g. Terminal on MacOS). In any case, `git` can be downloaded from its own [webpage](https://git-scm.com/downloads]).
+* Have a text editor installed. A text editor for "coding" is of great help since it can help you organize projects, visualize your code better, and so on. Two of the most used are Sublime Text and Atom, although there are dozens out there.
+* Have a GitHub account already created. This will not be explained since creating a GitHub account is pretty rudimentary — just like creating any other type of online account.
+* Have a little knowledge about how to use a command line interface (CLI), e.g. bash.
+
+I am doing this on MacOS, using `bash` version 3.2.57 and Atom.
+
+## 5. Setting up `git` for the very first time
 
 The best way to check if `git` is installed in your computer is to run the following:
 ```bash
@@ -45,9 +50,9 @@ $ git config --global user.name "Your Name"
 $ git config --global user.email your_name@mail.com
 ```
 
-This information will be helpful when you *commit* objects (when you "sync" your documents), both locally or remotely, since it will allow `git` and GitHub to create a history of whatever it is you want to version-control — to keep track of.
+This information will be helpful when you *commit* objects (when you "sync" your documents), since it will allow `git` and GitHub to create a history of whatever it is you want to keep track of — to version-control.
 
-Finally, if you have installed a text editor, you might want to use it with `git`. Setting up your text editor with git will require to pass in an argument that depends on the text editor. This is a good [link](https://help.github.com/en/articles/associating-text-editors-with-git) with three examples, for Atom, Sublime Text and TextMate. For the sake of this example, we will use Atom.
+Finally, if you have installed a text editor, you might want to use it with `git`. Setting up your text editor with `git` will require to pass in an argument that depends on the text editor. This is a good [link](https://help.github.com/en/articles/associating-text-editors-with-git) with three examples, for Atom, Sublime Text and TextMate. For the sake of this example, we will use Atom.
 ```bash
 $ git config --global core.editor "atom --wait"
 ```
@@ -67,13 +72,13 @@ filter.lfs.process=git-lfs filter-process
 filter.lfs.required=true
 ```
 
-Much more detailed information about this initial setup [here](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup). Just one important thing to note in case you are not checking out the previous link, is that `git` stores configuration at three different levels: repo-level, user-level and system-level. The `--global` flag allows to modify the user-level configuration.
+More detailed information about this initial setup [here](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup). Just one important thing to note in case you are not checking out the previous link, is that `git` stores configuration at three different levels: repository-level, user-level and system-level. The `--global` flag allows to modify the user-level configuration.
 
-## Initializing `git`
+## 6. Initializing `git`
 
-Say you already have some material you want to showcase on GitHub. Of course, you can always upload files to a GitHub repository manually and you can grant public access to it so that everyone can see what you have uploaded. However, thinking long-term, you might want to keep on improving these projects, or maybe add new projects to this folder in your computer, your "Projects" folder. In this case, the idea of manually uploading files — and subdirectories — is out of the question. You *will* want to work on your projects locally and `push` them to your GitHub account every time you have made some considerable improvements/additions.
+Say you already have some material you want to showcase on GitHub. Of course, you can always upload files to a GitHub repository manually and you can grant public access to it so that everyone can see what you have uploaded. However, thinking long-term, you might want to keep on improving these projects, or maybe add new projects to this folder in your computer, your "Projects" folder. In these cases, the idea of manually uploading files — and subdirectories — is out of the question. You *will* want to work on your projects locally and `push` them to your GitHub account every time you have made some considerable improvements/additions.
 
-In proper `git` terms, `git` uses *commits* to keep an "official" track — i.e. a version control — of your local working directory, and therefore, of its contents. To do this, `git` gives to each object inside the working directory a unique "id", and each commit you make is like a snapshot of all the contents in the working directory — e.g. the "Projects" folder. A *repository* (or "repo"), then, is nothing more than the collection of all this snapshots. As you might have deduced already, this allows you to "go back in time" if there is a change you made that you want reverted.
+In proper `git` terms, `git` uses *commits* to keep an "official" track — i.e. a version control — of your local working directory, and therefore, of its contents. To do this, `git` gives to each object inside the working directory a unique "id", and each commit you make is like a snapshot of all the contents in the working directory — e.g. the "Projects" folder. A *repository* (or "repo"), then, is nothing more than the collection of all these snapshots. As you might have deduced already, this allows you to "go back in time" if there is a change you made that you want reverted.
 
 `git` works on a per-tree basis, being the nodes and leaves the subfolders and files, respectively. When you initialize `git` on a local folder — i.e. the working directory — to later have it "synchronized" to GitHub, any modification you make inside this folder — to any file or subfolders — will be tracked and stored every time you commit these changes. Later, whenever you are ready, you will be able to `push` this updated content to GitHub. 
 
@@ -86,9 +91,9 @@ Initialized empty Git repository in /Users/<Your username>/Projects/.git/
 
 Now, officially, `git` has initialized a repository in your `Projects/` folder and has created a `.git/` folder inside. Here, it will store all the information necessary to keep the version-control — to keep a repository — of whatever you do in the working directory — e.g. the "Projects" folder.
 
-There is plenty information about how `git` works. One of the best documents I have found is "Git from the bottom up," by John Wiegley. You can find it [here](https://github.com/jwiegley/git-from-the-bottom-up). Just a heads up, this document got a little too technical for me at the beginning, but it's worth it if you want to get a better understanding of the inner working of `git`.
+There is plenty information about how `git` works at the object-level. One of the best documents I have found is "Git from the bottom up," by John Wiegley. You can find it [here](https://github.com/jwiegley/git-from-the-bottom-up). Just a heads up, this document got a little too technical for me at the beginning, but it's worth it if you want to get a better understanding of the inner working of `git`.
 
-## Adding files and subfolders
+## 7. Adding files and subfolders with `git add`
 
 At the moment, I only have two files inside `Projects/`, called `hello-world.py` and `hello-mars.py`. The content of each file is the following:
 * `hello-world.py`:
@@ -124,7 +129,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 But what do these status mean? Well, `untracked` means that `git` is aware that the files are there, in the working directory, but it is not following their history yet — it is not controlling their versions. Think of it as an object outside the picture frame: when you take the snapshot — i.e. when you *commit* the changes — these objects will be out of the picture.
 
-Say I am done working on `hello-world.py` and `hello-mars.py` and I want to have them ready for my later `push` to GitHub. The next step is to start tracking the files using `git add`. The argument `add` means that you are adding these files to `git`'s *index*. The index is the "tool" `git` uses to track — keep the version control — of everything in the working directory by giving each object (files and folders) a unique "id". Now, once you have started tracking something, these tracked objects can have three "sub-states":
+Say I am done working on `hello-world.py` and `hello-mars.py` and I want to have them ready for my later `push` to GitHub. The next step, then, is to start tracking the files using `git add`. The argument `add` means that you are adding these files to `git`'s *index*. The index is the "tool" `git` uses to track — keep the version control — of everything in the working directory by giving each object (files and subfolders) a unique "id". Now, once you have started tracking something, these tracked objects can have three "sub-states":
 * Staged;
 * Modified; or
 * Unmodified
@@ -166,7 +171,7 @@ In short, every time you add a **new** object (file or subdirectory) to the work
 
 `git add` is used, as explained above, to add objects to the index. Once an object is added to the index, it is ready to be committed. Everytime an object is modified, it needs to be "re-added" to the index so that it will be ready (again) to be committed, and this process necessary because of how `git` is designed. I put emphasis on this since, at the beginning, my conceptualization of the adding-committing process was something like: once the object is added to the index (and therefore tracked), then, after each modification, the only thing remaining to do is to commit it — because it is indexed and it is being kept track of already. However, this was wrong.
 
-`git` is a tool that has a *unique* way of tracking files: it involves using an encrypted (SHA-1) "id" that is based on the content of the file (check John Wiegly's "Git from the bottom up" link above). This means that, every time you modify an object, its "id" will change. And this gives `git` two main advanges (that allowed it to, according to what I read from more experimented Version Control System (VCS) users, to be more efficient in doing its job):
+`git` is a tool that has a *unique* way of tracking objects: it involves using an encrypted (SHA-1) "id" that is based on the content of the object (check John Wiegly's "Git from the bottom up" link above; I will explain a bit more this encryption later on). This means that, every time you modify an object, its "id" will change. And this gives `git` two main advanges (that allowed it to, according to what I read from more experimented Version Control System (VCS) users, to be more efficient in doing its job):
 * `git` does not keep copies of each version of your files: this allows `git` to use far less storage than if it were to keep each modified version you make of the same file; and
 * `git` allows you to design very specific workflows: `git` is highly customizable when it comes to how you do your workflow, and allows you to fine-tune from your branching operations, to your "syncing" (push and pull), to managing "micro" modifications and moving through them back and forth.
 
@@ -174,7 +179,7 @@ However, the price for these advantages is a steeper learning curve when compare
 
 Below, we will see other ways to commit objects "straight away", that is, without the necessity of doing `git add`, like when using `git commit -a`. However, at this point, it is important to remember that every single time you add a brand new object to the working directory, you have to `git add` it.
 
-## Modifying added files before committing and `git diff`
+## 8. Modifying added files before committing and `git diff`
 
 Modifying files is going to be part of your workflow — you are going to keep working on already indexed objects and add some new on your way. In this section, we will explain what happens when you modify an already-added-but-yet-committed file. We will continue with the previous example to make this more clear.
 
@@ -185,7 +190,7 @@ if __name__ == "__main__":
     print('You are so cold')
 ```
 
-If I proceed to commit the files added in the previous section, the modified `hello-mars.py` will not be committed with the changes I made on it. The reason for this, in case you did not read the very last part of the previous section, is because an "id" in the index was generated for the original `hello-mars.py`, but not for the modified one. You can check this out by running a `git status`:
+If I proceed to commit the files added in the previous section, the modified `hello-mars.py` will not be committed with the changes I made on it. The reason for this, in case you did not read the very last part of the previous section, is because the *current* "id" in the index is the one generated for the original `hello-mars.py`, but not for the modified one. You can check this out by running a `git status`:
 ```bash
 $ git status
 On branch master
@@ -206,7 +211,7 @@ Changes not staged for commit:
 
 ```
 
-As you might see, for `git`, there are now two *different* `hello-mars.py`. While in your computer's directory you will only see one file, a unique `hello-mars.py`, at a `git`-level there are two: the one you indexed before, using `git add`, and the one that has been modified. Now, in our example, it is easy to tell which one is which. But in case you forget what was in the indexed "version" of the file, and what in the "current" one, you can use the `git diff <file name>` command. This command will show you what has changed between the indexed object and the current object:
+As you might see, for `git`, there are now two *different* `hello-mars.py`. While in your computer's directory you will only see one file, a unique `hello-mars.py`, for `git` there are two: the one you indexed before, using `git add`, and the one that has been modified. Now, in our example, it is easy to tell which one is which. But in case you forget what was in the indexed "version" of the file, and what in the "current" one, you can use the `git diff <file name>` command. This command will show you what has changed between the indexed object and the current object:
 ```bash
 $ git diff hello-mars.py 
 warning: LF will be replaced by CRLF in hello-mars.py.
@@ -245,9 +250,9 @@ Changes to be committed:
 
 ```
 
-## Committing files with `git commit`
+## 9. Committing files with `git commit`
 
-As previously explained, committing allows `git` to store a "snapshot", of all the files added to the index, in the repository. In this sense, a sequence of commits creates a history that can tell how your repository has evolved over time. To commit files, the `git commit` command is used. Given that we are ready to commit the two Python scripts of our example, let us proceed:
+As previously explained, committing allows `git` to store a "snapshot" of all the files added to the index — of all *staged* files in the repository. In this sense, a sequence of commits creates a history that can tell how your repository has evolved over time. To commit files, the `git commit` command is used. Given that we are ready to commit the two Python scripts of our example, let us proceed:
 ```bash
 $ git commit -m 'First two Python scripts. hello-mars.py includes a second print line.'
 [master (root-commit) 7c30d25] First two Python scripts. hello-mars.py includes a second print line.
@@ -258,13 +263,13 @@ $ git commit -m 'First two Python scripts. hello-mars.py includes a second print
 
 As seen above, the `git commit` command is passed in with the `-m` flag. The `-m` flag allows the user to add a message that will help create a better (more readable) history of the repository. It is optional, but highly recommended. 
 
-Note the return of the command. `git` explicitly indicates the branch, `master`, the type of commit, `root-commit`, and the first seven digits of the commit's "id", `7c30d25` (yes, commits also get a unique "id" that is stored as an object). In this case, the *master branch* is the default branch `git` created when we initialized the repository and the one we are working on at the moment. A branch is, in short, a sequence of commits. Branches allow you to, at a given point, *branch out* and start diverging from your main project to, let's say, try something new that you still don't want in your "official" code — in your master branch. If that thing you branched out turns out to be something you want incorporated into your master branch, then `git` allows you to *merge* this "experimental" branch to the master branch. We will not delve into branches, since it is a very large topic and, at least for just keeping up a repo to showcase your work, it might not be necessary for the moment.
+Note the return of the command. `git` explicitly indicates the branch, `master`, the type of commit, `root-commit`, and the first seven digits of the commit's "id", `7c30d25` (yes, commits also get a unique "id" that is stored as an object). In this case, the *master branch* is the default branch `git` created when we initialized the repository and the one we are working on at the moment. A branch is, in short, a sequence of commits. Branches allow you to, at a given point, *branch out* and start diverging from your main project to, let's say, try something new that you still don't want in your "official" code — in your master branch. If that thing you branched out turns out to be something you want incorporated into your master branch, then `git` allows you to *merge* this "experimental" branch to the master branch. We will not delve into branches, since it is a very large topic and, at least for just keeping up a repo to showcase your work, it might not be necessary at the moment.
 
-Now, a `root-commit` is the first commit you ever make in a repository. This means that the commit has no parent-commit — a commit before it. There are different kinds of commits and we will explore some more down the road. 
+Now, a `root-commit` is the first commit you ever make in a repository. This means that the commit has no *parent-commit* — a commit before it. There are different kinds of commits and we will explore some more down the road. 
 
 Finally, a commit "id" is a SHA-1 value, and although being 40 characters long, `git` only presents the first 7 or 8, which is called the *short SHA-1*, and it is enough characters for `git` to recognize the commit.
 
-You can find the documentation of `git commit` command [here](https://git-scm.com/docs/git-commit).
+You can find the documentation of the `git commit` command [here](https://git-scm.com/docs/git-commit).
 
 **A bit more about SHA-1 and why `git` uses it**
 
@@ -274,23 +279,23 @@ So far we have talked about objects' "id" and now of commits' "id". But why do t
 
 Finally, for practical purposes, `git` allows you to refer to any hashed object using a short SHA-1 value, which is the first 7 or 8 characters of the entire value. Given that each SHA-1 value is so different from the next one, 7 or 8 values are more than enough for `git` to identify which object you are referring to. If you are interested in how to use the SHA-1 value to refer to different objects in `git`, check out this [link](https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection).
 
-## Excluding objects with `.gitignore`
+## 10. Excluding objects with `.gitignore`
 
-When working on your computer, you might have noticed that some applications (programs) might generate some temporary files. In a broader sense, sometimes our own workflow might generate objects that, because of their nature, are temporal or we just do not care about tracking them and even worse, getting them into our GitHub repo. 
+When working on your computer, you might have noticed that some applications (programs) might generate some temporary files. In a broader sense, sometimes our own workflow might generate objects that, because of their nature, are temporal or we just do not care about tracking them and even worse, getting them into our GitHub repository. 
 
 `git` proposes a very practical solution for this — for excluding files from being tracked —, and it's through the creation of a `.gitignore` file. For instance, if I create a subfolder in my working directory, because I am using MacOS, the OS will automatically create a `.DS_Store` file. This file is used by Finder on MacOS to keep information of the files and subfolders in a given directory. This is one file that, for instance, I totally do not want to showcase. 
 
 A `.gitignore` file is really a list of *things* you want `git` to exclude or to make sure it does *not* exclude. Given its broad use, there is information all around on how to create a good `.gitignore` file, and there are templates everywhere as well. I found one of the best sources to be GitHub's own article on how to ignore files, [here](https://help.github.com/en/articles/ignoring-files). First thing to keep in mind is that you can:
-* Ignore files locally, at a repo-level;
+* Ignore files locally, at a repo-level, with a `.gitignore` file;
 * Ignore files at a user-level;
-* Ignore files locally, at a repo-level, but without sharing the `.gitignore` file you created.
+* Ignore files locally, at a repo-level, but without a `.gitignore` file.
 
-In this example, we will create a `.gitignore` file at the repo-level and we will make it exclude the `.DS_Store` file, and a file of a given extension in a subfolder we will create below. First, let's create an empty file in bash:
+In this example, we will create a `.gitignore` file at the repo-level and we will make it exclude the `.DS_Store` file, and all files for a given extension in a subfolder we will create below. First, let's create an empty file in bash:
 ```bash
 $ touch .gitignore
 ```
 
-In bash, the `touch` command with a filename next to it allows you to create a blank file. We will add what we want excluded in a bit. First, let's create a subdirectory and a text file that we will later exclude.
+In bash, the `touch` command with a filename next to it allows you to create a blank file. We will add to it what we want excluded in a bit. First, let's create a subdirectory and two files — a text file and a Python one — that we will later exclude.
 ```bash
 $ mkdir temp-subfolder
 $ cd temp-subfolder/
@@ -377,7 +382,7 @@ If you want a fast way to learn how to write a `.gitignore` file, check out this
 
 Before moving over to the next section, don't forget to add the new files to the index with `git add *`.
 
-## Making more commits and `git log`
+## 11. Making more commits and `git log`
 
 So now you are a pro at adding files and, after adding those last objects to our working directory, we are ready to make our second commit. Let's proceed with that:
 ```bash
@@ -407,53 +412,53 @@ The `git log` command returns a list of the commits you have made in the current
 
 You can find detailed information about `git log` and how to use it to get customized returns [here](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History).
 
-## Creating a repository on GitHub
+## 12. Creating a repository on GitHub
 
 In this section, we will create a repository on GitHub. You should have created a GitHub account by now. 
 
 Now, for the sake of this tutorial, you will create a GitHub repo that will include a `README.md` file and a license. The `README.md` file allows you to put a "cover" to your repo — it will be automatically shown below the list of files and folders in your repo. The license is not mandatory, and GitHub offers you a number of templates that you can choose to add to your repository automatically.
 
-To create a GitHub repository, go to [GitHub](https://github.com) click on the `+` symbol on the top right corner of the screen, and choose `New repository`. Once the "New Repository" page is loaded, fill in a name for your repository. For this tutorial, we will call the new repo `example-repo`.
+To create a GitHub repository, go to [GitHub](https://github.com), click on the `+` symbol on the top right corner of the screen, and choose `New repository`. Once the "New Repository" page is loaded, fill in a name for your repository. For this tutorial, we will call the new repo `example-repo`.
 
 Below, add a short description of what this repo is all about (this information is going to be added to `README.md`, but you can change it afterwards if you want). Then, set the repository to `Public` — after all you want to showcase your work — and check on the `Initialize this repository with a README` box. Finally, click on the `Add a license:` button and choose the `MIT` license (it is a very generic license, but be sure to read it before you agree to it). Your final setup should look something like this:
 
-!!! INCLUDE IMAGE !!!
+<img src="https://ramd-public-bucket.s3.ca-central-1.amazonaws.com/tutorials-git-and-github-creating-repo.png" alt='How the setup should look like' width=700>
 
 Finally, click on `Create repository`. Your new repository should look as follows:
 
-!!! INCLUDE IMAGE !!!
+<img src="https://ramd-public-bucket.s3.ca-central-1.amazonaws.com/tutorials-git-and-github-repo-created.png" alt='New repository just created' width=700>
 
-## Setting up the remote repository
+## 13. Setting up the remote repository with `git remote`
 
-Now that your GitHub repository is ready, the following step is to set up your local repository so that you can "sync" it with the one on GitHub.
+Now that your GitHub repository is ready, the following step is to configure your local repository so that it can "sync" with the one on GitHub.
 
-So, back in `bash` in your working directory, we will use the `git remote` command to have `git` do operations in a *remote* repository. This makes the difference more tangible between *local* and *remote* repositories. To add your remote repository to your local one (it is always this way — you add the remote repository to the local one), run the following:
+So, back in `bash` in your working directory, we will use the `git remote` command to have `git` do operations in a *remote* repository. This makes a more tangible difference between *local* and *remote* repositories. To add your remote repository to your local one (it is always this way — you add the remote repository to the local one), run the following:
 ```bash
-$ git remote add origin https://github.com/rmoralesdelgado/example-repo.git
+$ git remote add origin https://github.com/<Your GitHub Account>/example-repo.git
 ```
 
-This command will yield no return, but you can check if it was properly set up by running `git remote show origin`:
+This command will yield no return, but you can check if it was properly set up by running `git remote -v`:
 ```bash
 $ git remote -v
-origin	https://github.com/rmoralesdelgado/example-repo.git (fetch)
-origin	https://github.com/rmoralesdelgado/example-repo.git (push)
+origin	https://github.com/<Your GitHub Account>/example-repo.git (fetch)
+origin	https://github.com/<Your GitHub Account>/example-repo.git (push)
 ```
 
-**Important note**: Do not forget to add the `.git` at the end of the GitHub's repository URL. For instance, if I load my `example-repo` on GitHub, the URL will be `https://github.com/rmoralesdelgado/example-repo`. However, to set the remote repository, you need to add the `.git`.
+**Important note**: Do not forget to add the `.git` at the end of the GitHub's repository URL. For instance, if I load my `example-repo` on GitHub, the URL will be `https://github.com/<Your GitHub Account>/example-repo`. However, to set the remote repository, you need to add the `.git`.
 
 You can find more information about working with remote repositories [here](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes).
 
-## Pushing and pulling
+## 14. Pushing and pulling with `git push` and `git pull`
 
 The commands `git push` and `git pull` will be reviewed in this section. If you are "standing" *in* your local repository, the words *push* and *pull* become a bit more clear. `push` refers to the act of sending something *to* the remote repo, and `pull` to the act of getting something *from* the remote repo.
 
 As we move forward with our work locally, we are going to want to "sync" our local repository to the one on GitHub. We do this by *pushing* our local repo to the remote one. Now, in our example, we had two files and a subfolder with one file, and we are going to try to push all this content — which, by the way, has already been committed, so it is ready to be pushed — to our remote repository, `example-repo`.
 ```bash
 $ git push origin master
-Username for 'https://github.com': rmoralesdelgado
-Password for 'https://rmoralesdelgado@github.com': 
+Username for 'https://github.com': <Your GitHub Account>
+Password for 'https://<Your GitHub Account>@github.com': 
  ! [rejected]        master -> master (fetch first)
-error: failed to push some refs to 'https://github.com/rmoralesdelgado/example-repo.git'
+error: failed to push some refs to 'https://github.com/<Your GitHub Account>/example-repo.git'
 hint: Updates were rejected because the remote contains work that you do
 hint: not have locally. This is usually caused by another repository pushing
 hint: to the same ref. You may want to first integrate the remote changes
@@ -474,13 +479,13 @@ remote: Counting objects: 100% (4/4), done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (4/4), done.
-From https://github.com/rmoralesdelgado/example-repo
+From https://github.com/<Your GitHub Account>/example-repo
  * branch            master     -> FETCH_HEAD
  * [new branch]      master     -> origin/master
 fatal: refusing to merge unrelated histories
 ```
 
-Now we tried to do a `git pull`, and, again, it failed. So what happened now? Well, `git` started pulling the commits from the remote repo but, before completing its task, it had a "fatal error": it was not able to merge the *unrelated* histories. What is happening now is the same that happened when we tried to push our repo: the commit histories of both repositories are entirely diffenrent, and because of that, `git` does not know how to "order" the commits. If we think of commits as snapshots, then think of it of snapshots of two very different things — if you try to order them into a *single history*, you will not be able to know how to do it because they tell unrelated histories. Furthermore, you can check that the pull was not successful by running a `ls` in your working directory.
+Now we tried to do a `git pull`, and, again, it failed. So what happened now? Well, `git` started pulling the commits from the remote repo but, before completing its task, it had a "fatal error": it was not able to merge the *unrelated* histories. What is happening now is the same that happened when we tried to push our repo: the commit histories of both repositories are entirely different —even the `root-commit`s are different —, and because of that, `git` does not know how to "order" the commits. If we think of commits as snapshots, then think of it as snapshots of two very different things — if you try to order them into a *single history*, you will not be able to know how to do it because they tell unrelated histories. Furthermore, you can check that the pull was not successful by running a `ls` in your working directory.
 ```bash
 $ ls
 hello-mars.py	hello-world.py	temp-subfolder
@@ -488,14 +493,14 @@ hello-mars.py	hello-world.py	temp-subfolder
 
 As seen above, there is no `README.md` nor License files. If the `git pull` were successful, we would see these files in our working directory. What we have to do now, is to make `git` "merge" these unrelated histories.
 
-## Rebasing with `git pull --rebase`
+## 15. Rebasing with `git pull --rebase`
 
 In this section, we will use the `git pull --rebase` command to make both histories form a single and unified history.
 
-As the name of the flag reveals, `--rebase` consists on grabbing one history and use it to *rebase* the other one upon. That is like, grabbing one pile of snapshots and stacking them over the other pile. When you `git pull --rebase`, the remote history will be the new base, and the local history will be rebased on top of the remote one, thus generating a single history.
+As the name of the flag reveals, `--rebase` consists on grabbing one history — a *branch* — and use it to *rebase* the other one on top of the first one. That is like, grabbing one pile of snapshots and stacking them over the other pile. When you `git pull --rebase`, the remote history will be the new base, and the local history will be rebased on top of the remote one, thus generating a single history.
 ```bash
 $ git pull --rebase origin master
-From https://github.com/rmoralesdelgado/example-repo
+From https://github.com/<Your GitHub Account>/example-repo
  * branch            master     -> FETCH_HEAD
 First, rewinding head to replay your work on top of it...
 Applying: First two Python scripts. hello-mars.py includes a second print line.
@@ -518,11 +523,11 @@ Compressing objects: 100% (6/6), done.
 Writing objects: 100% (8/8), 841 bytes | 841.00 KiB/s, done.
 Total 8 (delta 1), reused 0 (delta 0)
 remote: Resolving deltas: 100% (1/1), done.
-To https://github.com/rmoralesdelgado/example-repo.git
+To https://github.com/<Your GitHub Account>/example-repo.git
    f93f768..1e1491d  master -> master
 ```
 
-From the above return, the `f93f768..1e1491d` tells us the range of commits that have just been "synced". The `master -> master` tells as that we have pushed our local `master` branch to the remote `master` branch. Also, if you check your GitHub repository now, you will find in it all the files you had previously committed in your local repository. 
+From the return above, the `f93f768..1e1491d` tells us the range of commits that have just been "synced". The `master -> master` tells as that we have pushed our local `master` branch to the remote `master` branch. Also, if you check your GitHub repository now, you will find in it all the files you had previously committed in your local repository. 
 
 **The rebased log**
 
@@ -542,19 +547,19 @@ Date:   Tue Aug 6 16:39:15 2019 -0400
     First two Python scripts. hello-mars.py includes a second print line.
 
 commit f93f76822a3c1b405a215ed4689f44f74b72e2b4
-Author: rmoralesdelgado <41495685+rmoralesdelgado@users.noreply.github.com>
+Author: <Your GitHub Account> <41495685+<Your GitHub Account>@users.noreply.github.com>
 Date:   Fri Jul 26 20:57:38 2019 -0400
 
     Initial commit
 ```
 
-As expected, the first commit, `f93f768`, is the one from GitHub, and on top of this commit are the ones we made locally, `ecb4f8f` and `1e1491d`. However, note that the last two commits (the local-made ones) have different SHA-1 values than when they were first made. The reason for this is `rebase`. The `rebase` command (it is a command, although also a flag for the `pull` command) intrinsic function is to let you *rewrite* histories. In this sense, when we rebase one history on top of another one, the one at the bottom — e.g. the one from the GitHub repo — stayed the same, while everything on top of it was rewritten (and by everything, we mean **everything**). **The `rebase` function is very useful but you need to be careful with it, since it does rewrite histories (sequence of commits).** 
+As expected, the first commit, `f93f768`, is the one from GitHub, and on top of this commit are the ones we made locally, `ecb4f8f` and `1e1491d`. However, note that the last two commits (the local-made ones) have different SHA-1 values than when they were first made. The reason for this is `rebase`. The `rebase` command (it is a command, although also a flag for the `pull` command) intrinsic function is to let you *rewrite* histories. In this sense, when we rebase one history on top of another one, the one at the bottom — e.g. the one from the GitHub repo — stayed the same, while everything on top of it was rewritten (and by everything, I mean **everything**). **The `rebase` function is very useful but you need to be careful with it, since it does rewrite histories (sequence of commits).** 
 
 We will not delve into all the `rebase` command can do, although there are some helpful links to try to understand how it works on a practical level. First, you can find a very good explanation about `git rebase` [here](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase), and a more in-depth explanation about why doing a `rebase` instead of a `merge` (in practical terms, `git pull` = `git fetch` + `git merge FETCH_HEAD`, as stated in `git`'s [documentation](https://git-scm.com/docs/git-pull#_description)), [here](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
 
 Finally, you can find the official documention of `git push` [here](https://git-scm.com/docs/git-push), `git pull` [here](https://git-scm.com/docs/git-pull) (and `git pull --rebase` [here](https://git-scm.com/docs/git-pull#Documentation/git-pull.txt---rebasefalsetruemergespreserveinteractive)), and of `git rebase` [here](https://git-scm.com/docs/git-rebase).
 
-## Knowing which branches are being tracked
+## 16. Knowing which branches are being tracked
 
 While we are not delving into branches in this tutorial, in this section we are still going to show how to identify which branches from a remote repository are being tracked — these are also called *remote-tracking* branches. The importance of this is quite simple: it enables us to start collaborating — say you and some friends are working on some common project together and you need to be sure you are pushing your commits to the right branch of the common repository (let's assume you are working with people that know branching). 
 
@@ -571,8 +576,8 @@ However, if we start working in a repository with more branches, this is no long
 ```bash
 $ git remote show origin
 * remote origin
-  Fetch URL: https://github.com/rmoralesdelgado/example-repo.git
-  Push  URL: https://github.com/rmoralesdelgado/example-repo.git
+  Fetch URL: https://github.com/<Your GitHub Account>/example-repo.git
+  Push  URL: https://github.com/<Your GitHub Account>/example-repo.git
   HEAD branch: master
   Remote branch:
     master tracked
@@ -600,11 +605,15 @@ In the case of `master`, it is assigned by default in both `git` and GitHub to t
 
 You can find a very good Stack Overflow explanation on these conventions [here](https://stackoverflow.com/a/42871621/11905552) (and also on how to change the "master" name to something else).
 
-## Merge-commits and setting up the `upstream` branches
+## 17. Merge-commits and setting up the `upstream` branches
 
 One of the main advantages of `git`, as previously pointed out, is that it allows fine-grained customization, specially when related to making your workflow more efficient. In this section, we will show what a *merge-commit* is and how to set, for a local branch, an *upstream* branch for pulling and pushing.
 
-First, let's modify a couple files to have something to pull and then to push. On GitHub, click on the `hello-world.py` file to open it and then, when the file's webpage loads, click on the pencil icon to edit the file. Now, add one line such that the file looks like this:
+### 17.1 Modifying some files locally and remotely
+
+In this subsection, we will modify a couple files to have something to pull and then to push — we will modify a file directly on GitHub (to simulate having someone updating files in the remote branch) and a file locally (to simulate the constant development of our local work). If you have files of your own, you can do this on your own files. If not, follow along.
+
+On GitHub, click on the `hello-world.py` file to open it and then, when the file's webpage loads, click on the pencil icon to edit the file. Now, add one line such that the file looks like this:
 ```python
 if __name__ == "__main__":
     print('Hello World')
@@ -668,13 +677,15 @@ Date:   Tue Aug 6 16:39:15 2019 -0400
     First two Python scripts. hello-mars.py includes a second print line.
 
 commit f93f76822a3c1b405a215ed4689f44f74b72e2b4
-Author: rmoralesdelgado <41495685+rmoralesdelgado@users.noreply.github.com>
+Author: <Your GitHub Account> <41495685+<Your GitHub Account>@users.noreply.github.com>
 Date:   Fri Jul 26 20:57:38 2019 -0400
 
     Initial commit
 ```
 
-As previously explained, before pushing something to the remote repository, we must pull first, such that our local repository is up-to-date with the remote one. We use `git pull` to do this:
+### 17.2 Merge-commits
+
+As previously explained, before pushing something to a remote repository, we must pull first, such that our local repository is up-to-date with the remote one. We use `git pull` to do this:
 ```bash
 $ git pull origin master
 remote: Enumerating objects: 5, done.
@@ -682,15 +693,15 @@ remote: Counting objects: 100% (5/5), done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), done.
-From https://github.com/rmoralesdelgado/example-repo
+From https://github.com/<Your GitHub Account>/example-repo
  * branch            master     -> FETCH_HEAD
    1e1491d..fd92ccf  master     -> origin/master
 hint: Waiting for your editor to close the file... 
 ```
 
-Your text editor will open so that you can introduce a commit message. Right now, when you ran `git pull origin master`, you were actually executing a `git fetch` and a `git merge`, as mentioned earlier. The merging process requires a *merge-commit*. A `merge-commit` is the type of commit that happens when you merge branches — in our case, we are merging the local `master` with `origin/master`. 
+Your text editor will open so that you can introduce a commit message. Right now, when you ran `git pull origin master`, you were actually executing a `git fetch` and a `git merge`, as mentioned earlier. The merging process requires a *merge-commit*. A `merge-commit` is the type of commit that happens when you merge branches — in our case, we are merging the local `master` with `origin/master` — and this is happening because both branches have diverged: some "independent" work has been done in both branches, such that the last commits of both are different.
 
-As stated in the `hint` of the code above, `git` is now waiting for you to write a `merge-commit` message and save and close the file, such that the merging process can be completed. Modify the file such that it looks as follows:
+As stated in the `hint` of the code above, `git` is now waiting for you to write a `merge-commit` message in your text editor and to save and close the file, such that the merging process can be completed. Modify the file such that it looks as follows:
 ```text
 Updating local repository.
 
@@ -710,7 +721,7 @@ Merge made by the 'recursive' strategy.
 
 This return means that the merging was successful and it also states which strategy was used to complete the merge — `recursive`. You can get detailed documentation about merging strategies [here](https://git-scm.com/docs/git-merge#_merge_strategies).
 
-If we check the log now, we will see two main things: a) that the commit we made on GitHub when we modified `hello-world.py` has been added as well as the merge-commit (and note it references the two commits where the merge happened, `Merge: b224ffc fd92ccf`); and, b) that it states where the `HEAD` of the local repo is at — `commit 73f53659fe63ce4d22951feaf14a378cb94e182a (HEAD -> master)` — and where it is in the remote repo — `commit fd92ccffb99d416bb7c5ca755d2f24243e74ab2f (origin/master)` —:
+If we check the log now, we will see two main things: a) that the commit we made on GitHub when we modified `hello-world.py` has been added as well as the merge-commit (and note it references its two *parent-commits*, `Merge: b224ffc fd92ccf`); and, b) that it states where the `HEAD` of the local repo is at — `commit 73f53659fe63ce4d22951feaf14a378cb94e182a (HEAD -> master)` — and where it is in the remote repo — `commit fd92ccffb99d416bb7c5ca755d2f24243e74ab2f (origin/master)` —:
 
 ```bash
 $ git log
@@ -728,13 +739,13 @@ Date:   Fri Aug 9 03:52:16 2019 -0400
     Updated hello-mars.py by adding a new line
 
 commit fd92ccffb99d416bb7c5ca755d2f24243e74ab2f (origin/master)
-Author: Raul Morales Delgado <41495685+rmoralesdelgado@users.noreply.github.com>
+Author: <Your GitHub Account> <41495685+<Your GitHub Account>@users.noreply.github.com>
 Date:   Fri Aug 9 03:44:32 2019 -0400
 
     Updated hello-world.py by adding a new line.
 ```
 
-The fact that the local HEAD differs from the remote one is logical — we still have not pushed our local repo into the remote one. Let's proceed with that:
+The fact that the local `HEAD` differs from the remote one is logical — we still have not pushed our local repo into the remote one. Let's proceed with that:
 
 ```bash
 $ git push origin master
@@ -745,7 +756,7 @@ Compressing objects: 100% (5/5), done.
 Writing objects: 100% (5/5), 584 bytes | 292.00 KiB/s, done.
 Total 5 (delta 3), reused 0 (delta 0)
 remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
-To https://github.com/rmoralesdelgado/example-repo.git
+To https://github.com/<Your GitHub Account>/example-repo.git
    fd92ccf..73f5365  master -> master
 ```
 
@@ -762,26 +773,28 @@ Date:   Fri Aug 9 03:56:38 2019 -0400
 
 This whole previous process is very common — you will most likely work with people who will push their own code to the common repo on GitHub and, when you are about to push yours, you will realize that because the remote has been updated, you will have to pull it first. After this, you will be able to finally push your commits. We can make this process a little bit more agile by setting the *upstream* branches. This allows us to just use `git push` and `git pull` on the local branch without having to add `origin master` every single time. 
 
-First, let's set up the `git push` upstream:
+### 17.3 Setting up the `upstream branches`
+
+First, let's set up `git push` with its upstream branch:
 ```bash
 $ git push -u origin master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 Everything up-to-date
 ```
 
-As stated above, the `master` branch has now been set up to track `origin/master` when you run `git push`. Now, to set the upstream branch for `git pull`:
+As stated above, the local `master` branch has now been set up to track `origin/master` when you run `git push`. Now, to set the upstream branch for `git pull`:
 
 ```bash
 $ git branch -u origin/master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```
 
-Here, even though we have got the same return as before, in this case it must be noted that now the `master` branch has now been set up to track `origin/master` when you run `git pull`. You can ascertain the state of your remote-tracking branches using `git remote show origin`:
+Here, even though we have got the same return as before, it must be noted that now the local `master` branch has been set up to track `origin/master` when you run `git pull`. You can ascertain the state of your remote-tracking branches using `git remote show origin`:
 ```bash
 $ git remote show origin
 * remote origin
-  Fetch URL: https://github.com/rmoralesdelgado/example-repo.git
-  Push  URL: https://github.com/rmoralesdelgado/example-repo.git
+  Fetch URL: https://github.com/<Your GitHub Account>/example-repo.git
+  Push  URL: https://github.com/<Your GitHub Account>/example-repo.git
   HEAD branch: master
   Remote branch:
     master tracked
@@ -797,7 +810,7 @@ As a final note, in our example, setting upstream branches is a bit of an overki
 
 You can find documentation about `git push` [here](https://git-scm.com/docs/git-push) and about `git branch` [here](https://git-scm.com/docs/git-branch). In both cases, the flag `-u` stands for `--set-upstream`.
 
-## Knowing what is being tracked and filtering files by their status
+## 18. Knowing which objects are being tracked and filtering them by their status
 
 This is our final section. Here, we will show how to visualize the trees and files that `git` is tracking (and *not* tracking). As previously explained, once you initialize a `git` repository, `git` becomes able to "see" all objects in that working directory. Furthermore, once you add objects, `git` indexes the objects and tracks any changes you make to them. You can always decide not to track a file, or to exclude it by using `.gitignore`. However, as you start amassing more and more files, you might start losing "personal" track about what is being tracked and what not. For instance, you might want to know which files have been deleted or modified, or which files are not being tracked (because you manually removed them from the index or because they are being excluded by `.gitignore`). While you can always see all the files on your working directory (with `ls -a`), seeing the repository's objects requires a different set of commands.
 
@@ -857,6 +870,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 Because `hello-mars.py` has been deleted but not committed yet, we can get a list of the deleted files using `git ls-files` and see this file in the list:
+```bash
 $ git ls-files --deleted
 hello-mars.py
 ```
@@ -877,7 +891,7 @@ $ git ls-files --deleted --with-tree HEAD~
 hello-mars.py
 ```
 
-Here, we are asking `git ls-files` to show us the `--deleted` files at a specific snapshot: the one corresponding to the tree (`--with-tree`) one snapshot ago — `HEAD~`.
+Here, we are asking `git ls-files` to show us the `--deleted` files at a specific snapshot: the one corresponding to the tree (`--with-tree`) one snapshot ago — `HEAD~`. Note that if you want the entire list of deleted files with their corresponding commits, then probably the best way to do it would be by using `git log --no-renames --diff-filter=D --summary`.
 
 As a second and final use-case for `git ls-files`, we will show how to get the ignored files:
 ```bash
@@ -916,6 +930,6 @@ You can find the glossary definitions of both `HEAD` and `heads` [here](https://
 
 
     ['[NbConvertApp] Converting notebook Quick and Easy Setup for Git and GitHub.ipynb to markdown',
-     '[NbConvertApp] Writing 61734 bytes to Quick and Easy Setup for Git and GitHub.md']
+     '[NbConvertApp] Writing 65567 bytes to Quick and Easy Setup for Git and GitHub.md']
 
 

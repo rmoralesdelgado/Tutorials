@@ -10,7 +10,7 @@ In the following lines, you will find a brief description of the content of each
 
 The objective of this tutorial is to provide an easy and quick setup guide for both Git and GitHub — making them both work together — and to give some simple and core understanding of both tools such that the reader can develop a simple workflow that allows it to integrate `git` and GitHub as part of its everyday tools.
 
-## 02 Setting Up a Jupyter Notebook server on a Virtual Machine
+## 02 Setting Up a Jupyter Notebook Server on a Virtual Machine
 
 Under construction! Please check back later for this tutorial.
 

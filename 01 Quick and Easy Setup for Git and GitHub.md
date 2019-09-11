@@ -1,6 +1,8 @@
 
 # Quick and Easy Setup for Git and GitHub
 
+By Raul Morales Delgado.
+
 <h2>Table of Contents<span class="tocSkip"></span></h2>
 <div class="toc"><ul class="toc-item"><li><span><a href="#1-Objective" data-toc-modified-id="1.-Objective-1">1. Objective</a></span></li><li><span><a href="#2-Scope" data-toc-modified-id="2.-Scope-2">2. Scope</a></span></li><li><span><a href="#3-Introduction" data-toc-modified-id="3.-Introduction-3">3. Introduction</a></span></li><li><span><a href="#4-Requirements" data-toc-modified-id="4.-Requirements-4">4. Requirements</a></span></li><li><span><a href="#5-Setting-up-git-for-the-very-first-time" data-toc-modified-id="5.-Setting-up-git-for-the-very-first-time-5">5. Setting up <code>git</code> for the very first time</a></span></li><li><span><a href="#6-Initializing-git" data-toc-modified-id="6.-Initializing-git-6">6. Initializing <code>git</code></a></span></li><li><span><a href="#7-Adding-files-and-subfolders-with-git-add" data-toc-modified-id="7.-Adding-files-and-subfolders-with-git-add-7">7. Adding files and subfolders with <code>git add</code></a></span></li><li><span><a href="#8-Modifying-added-files-before-committing-and-git-diff" data-toc-modified-id="8.-Modifying-added-files-before-committing-and-git-diff-8">8. Modifying added files before committing and <code>git diff</code></a></span></li><li><span><a href="#9-Committing-files-with-git-commit" data-toc-modified-id="9.-Committing-files-with-git-commit-9">9. Committing files with <code>git commit</code></a></span></li><li><span><a href="#10-Excluding-objects-with-.gitignore" data-toc-modified-id="10.-Excluding-objects-with-.gitignore-10">10. Excluding objects with <code>.gitignore</code></a></span></li><li><span><a href="#11-Making-more-commits-and-git-log" data-toc-modified-id="11.-Making-more-commits-and-git-log-11">11. Making more commits and <code>git log</code></a></span></li><li><span><a href="#12-Creating-a-repository-on-GitHub" data-toc-modified-id="12.-Creating-a-repository-on-GitHub-12">12. Creating a repository on GitHub</a></span></li><li><span><a href="#13-Setting-up-the-remote-repository-with-git-remote" data-toc-modified-id="13.-Setting-up-the-remote-repository-with-git-remote-13">13. Setting up the remote repository with <code>git remote</code></a></span></li><li><span><a href="#14-Pushing-and-pulling-with-git-push-and-git-pull" data-toc-modified-id="14.-Pushing-and-pulling-with-git-push-and-git-pull-14">14. Pushing and pulling with <code>git push</code> and <code>git pull</code></a></span></li><li><span><a href="#15-Rebasing-with-git-pull---rebase" data-toc-modified-id="15.-Rebasing-with-git-pull---rebase-15">15. Rebasing with <code>git pull --rebase</code></a></span></li><li><span><a href="#16-Knowing-which-branches-are-being-tracked" data-toc-modified-id="16.-Knowing-which-branches-are-being-tracked-16">16. Knowing which branches are being tracked</a></span></li><li><span><a href="#17-Merge-commits-and-setting-up-the-upstream-branches" data-toc-modified-id="17.-Merge-commits-and-setting-up-the-upstream-branches-17">17. Merge-commits and setting up the <code>upstream</code> branches</a></span><ul class="toc-item"><li><span><a href="#171-Modifying-some-files-locally-and-remotely" data-toc-modified-id="17.1-Modifying-some-files-locally-and-remotely-17.1">17.1 Modifying some files locally and remotely</a></span></li><li><span><a href="#172-Merge-commits" data-toc-modified-id="17.2-Merge-commits-17.2">17.2 Merge-commits</a></span></li><li><span><a href="#173-Setting-up-the-upstream-branches" data-toc-modified-id="17.3-Setting-up-the-upstream-branches-17.3">17.3 Setting up the <code>upstream branches</code></a></span></li></ul></li><li><span><a href="#18-Knowing-which-objects-are-being-tracked-and-filtering-them-by-their-status" data-toc-modified-id="18.-Knowing-which-objects-are-being-tracked-and-filtering-them-by-their-status-18">18. Knowing which objects are being tracked and filtering them by their status</a></span></li></ul></div>
 
@@ -923,25 +925,25 @@ You can find the glossary definitions of both `HEAD` and `heads` [here](https://
 
 
 ```python
-!!jupyter nbconvert --to markdown 'Quick and Easy Setup for Git and GitHub.ipynb'
+!!jupyter nbconvert --to markdown '01 Quick and Easy Setup for Git and GitHub.ipynb'
 ```
 
 
 
 
-    ['[NbConvertApp] Converting notebook Quick and Easy Setup for Git and GitHub.ipynb to markdown',
-     '[NbConvertApp] Writing 67849 bytes to Quick and Easy Setup for Git and GitHub.md']
+    ['[NbConvertApp] Converting notebook 01 Quick and Easy Setup for Git and GitHub.ipynb to markdown',
+     '[NbConvertApp] Writing 67910 bytes to 01 Quick and Easy Setup for Git and GitHub.md']
 
 
 
 
 ```python
-!!. md-formatter.sh 'Quick and Easy Setup for Git and GitHub.md'
+!!. md-formatter.sh '01 Quick and Easy Setup for Git and GitHub.md'
 ```
 
 
 
 
-    ['Markdown formatting successful on Quick and Easy Setup for Git and GitHub.md']
+    ['[md-formatter] Markdown formatting successful on 01 Quick and Easy Setup for Git and GitHub.md']
 
 

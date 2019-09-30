@@ -1,10 +1,9 @@
-
-# Quick and Easy Setup for Git and GitHub
+# Quick and Sustainable Git and GitHub
 
 By Raul Morales Delgado.
 
-<h2>Table of Contents<span class="tocSkip"></span></h2>
-<div class="toc"><ul class="toc-item"><li><span><a href="#1-Objective" data-toc-modified-id="1.-Objective-1">1. Objective</a></span></li><li><span><a href="#2-Scope" data-toc-modified-id="2.-Scope-2">2. Scope</a></span></li><li><span><a href="#3-Introduction" data-toc-modified-id="3.-Introduction-3">3. Introduction</a></span></li><li><span><a href="#4-Requirements" data-toc-modified-id="4.-Requirements-4">4. Requirements</a></span></li><li><span><a href="#5-Setting-up-git-for-the-very-first-time" data-toc-modified-id="5.-Setting-up-git-for-the-very-first-time-5">5. Setting up <code>git</code> for the very first time</a></span></li><li><span><a href="#6-Initializing-git" data-toc-modified-id="6.-Initializing-git-6">6. Initializing <code>git</code></a></span></li><li><span><a href="#7-Adding-files-and-subfolders-with-git-add" data-toc-modified-id="7.-Adding-files-and-subfolders-with-git-add-7">7. Adding files and subfolders with <code>git add</code></a></span></li><li><span><a href="#8-Modifying-added-files-before-committing-and-git-diff" data-toc-modified-id="8.-Modifying-added-files-before-committing-and-git-diff-8">8. Modifying added files before committing and <code>git diff</code></a></span></li><li><span><a href="#9-Committing-files-with-git-commit" data-toc-modified-id="9.-Committing-files-with-git-commit-9">9. Committing files with <code>git commit</code></a></span></li><li><span><a href="#10-Excluding-objects-with-.gitignore" data-toc-modified-id="10.-Excluding-objects-with-.gitignore-10">10. Excluding objects with <code>.gitignore</code></a></span></li><li><span><a href="#11-Making-more-commits-and-git-log" data-toc-modified-id="11.-Making-more-commits-and-git-log-11">11. Making more commits and <code>git log</code></a></span></li><li><span><a href="#12-Creating-a-repository-on-GitHub" data-toc-modified-id="12.-Creating-a-repository-on-GitHub-12">12. Creating a repository on GitHub</a></span></li><li><span><a href="#13-Setting-up-the-remote-repository-with-git-remote" data-toc-modified-id="13.-Setting-up-the-remote-repository-with-git-remote-13">13. Setting up the remote repository with <code>git remote</code></a></span></li><li><span><a href="#14-Pushing-and-pulling-with-git-push-and-git-pull" data-toc-modified-id="14.-Pushing-and-pulling-with-git-push-and-git-pull-14">14. Pushing and pulling with <code>git push</code> and <code>git pull</code></a></span></li><li><span><a href="#15-Rebasing-with-git-pull---rebase" data-toc-modified-id="15.-Rebasing-with-git-pull---rebase-15">15. Rebasing with <code>git pull --rebase</code></a></span></li><li><span><a href="#16-Knowing-which-branches-are-being-tracked" data-toc-modified-id="16.-Knowing-which-branches-are-being-tracked-16">16. Knowing which branches are being tracked</a></span></li><li><span><a href="#17-Merge-commits-and-setting-up-the-upstream-branches" data-toc-modified-id="17.-Merge-commits-and-setting-up-the-upstream-branches-17">17. Merge-commits and setting up the <code>upstream</code> branches</a></span><ul class="toc-item"><li><span><a href="#171-Modifying-some-files-locally-and-remotely" data-toc-modified-id="17.1-Modifying-some-files-locally-and-remotely-17.1">17.1 Modifying some files locally and remotely</a></span></li><li><span><a href="#172-Merge-commits" data-toc-modified-id="17.2-Merge-commits-17.2">17.2 Merge-commits</a></span></li><li><span><a href="#173-Setting-up-the-upstream-branches" data-toc-modified-id="17.3-Setting-up-the-upstream-branches-17.3">17.3 Setting up the <code>upstream branches</code></a></span></li></ul></li><li><span><a href="#18-Knowing-which-objects-are-being-tracked-and-filtering-them-by-their-status" data-toc-modified-id="18.-Knowing-which-objects-are-being-tracked-and-filtering-them-by-their-status-18">18. Knowing which objects are being tracked and filtering them by their status</a></span></li></ul></div>
+<h2>Contents<span class="tocSkip"></span></h2>
+<div class="toc"><ul class="toc-item"><li><span><a href="#1-Objective" data-toc-modified-id="1.-Objective-1">1. Objective</a></span></li><li><span><a href="#2-Scope" data-toc-modified-id="2.-Scope-2">2. Scope</a></span></li><li><span><a href="#3-Introduction" data-toc-modified-id="3.-Introduction-3">3. Introduction</a></span></li><li><span><a href="#4-Requirements" data-toc-modified-id="4.-Requirements-4">4. Requirements</a></span></li><li><span><a href="#5-Setting-up-git-for-the-very-first-time" data-toc-modified-id="5.-Setting-up-git-for-the-very-first-time-5">5. Setting up <code>git</code> for the very first time</a></span></li><li><span><a href="#6-Initializing-git" data-toc-modified-id="6.-Initializing-git-6">6. Initializing <code>git</code></a></span></li><li><span><a href="#7-Adding-files-and-subfolders-and-their-status--git-add-and-git-status" data-toc-modified-id="7.-Adding-files-and-subfolders-and-their-status-—-git-add-and-git-status-7">7. Adding files and subfolders and their status — <code>git add</code> and <code>git status</code></a></span></li><li><span><a href="#8-Modifying-staged-objects-and-comparing-versions--git-diff" data-toc-modified-id="8.-Modifying-staged-objects-and-comparing-versions-—-git-diff-8">8. Modifying staged objects and comparing versions — <code>git diff</code></a></span></li><li><span><a href="#9-Committing-objects--git-commit" data-toc-modified-id="9.-Committing-objects-—-git-commit-9">9. Committing objects — <code>git commit</code></a></span></li><li><span><a href="#10-Excluding-objects--gitignore" data-toc-modified-id="10.-Excluding-objects-—-.gitignore-10">10. Excluding objects — <code>.gitignore</code></a></span></li><li><span><a href="#11-More-commits-and-their-log--git-log" data-toc-modified-id="11.-More-commits-and-their-log-—-git-log-11">11. More commits and their log — <code>git log</code></a></span></li><li><span><a href="#12-Creating-a-repository-on-GitHub" data-toc-modified-id="12.-Creating-a-repository-on-GitHub-12">12. Creating a repository on GitHub</a></span></li><li><span><a href="#13-Setting-up-the-remote-repository--git-remote" data-toc-modified-id="13.-Setting-up-the-remote-repository-—-git-remote-13">13. Setting up the remote repository — <code>git remote</code></a></span></li><li><span><a href="#14-Pushing-and-pulling--git-push-and-git-pull" data-toc-modified-id="14.-Pushing-and-pulling-—-git-push-and-git-pull-14">14. Pushing and pulling — <code>git push</code> and <code>git pull</code></a></span></li><li><span><a href="#15-Rebasing-on-a-remote-branch--git-pull---rebase" data-toc-modified-id="15.-Rebasing-on-a-remote-branch-—-git-pull---rebase-15">15. Rebasing on a remote branch — <code>git pull --rebase</code></a></span></li><li><span><a href="#16-Knowing-which-branches-are-being-tracked--git-branch" data-toc-modified-id="16.-Knowing-which-branches-are-being-tracked-—-git-branch-16">16. Knowing which branches are being tracked — <code>git branch</code></a></span></li><li><span><a href="#17-Merge-commits-and-setting-up-the-upstream-branches" data-toc-modified-id="17.-Merge-commits-and-setting-up-the-upstream-branches-17">17. Merge-commits and setting up the <code>upstream</code> branches</a></span><ul class="toc-item"><li><span><a href="#171-Modifying-some-files-locally-and-remotely" data-toc-modified-id="17.1-Modifying-some-files-locally-and-remotely-17.1">17.1 Modifying some files locally and remotely</a></span></li><li><span><a href="#172-Merge-commits" data-toc-modified-id="17.2-Merge-commits-17.2">17.2 Merge-commits</a></span></li><li><span><a href="#173-Setting-up-the-upstream-branches" data-toc-modified-id="17.3-Setting-up-the-upstream-branches-17.3">17.3 Setting up the <code>upstream branches</code></a></span></li></ul></li><li><span><a href="#18-Tracked-objects-and-filtering-by-status--git-ls-files-and-git-ls-tree" data-toc-modified-id="18.-Tracked-objects-and-filtering-by-status-—-git-ls-files-and-git-ls-tree-18">18. Tracked objects and filtering by status — <code>git ls-files</code> and <code>git ls-tree</code></a></span></li></ul></div>
 
 ## 1. Objective
 
@@ -95,7 +94,7 @@ Now, officially, `git` has initialized a repository in your `Projects/` folder a
 
 There is plenty information about how `git` works at the object-level. One of the best documents I have found is "Git from the bottom up," by John Wiegley. You can find it [here](https://github.com/jwiegley/git-from-the-bottom-up). Just a heads up, this document got a little too technical for me at the beginning, but it's worth it if you want to get a better understanding of the inner working of `git`.
 
-## 7. Adding files and subfolders with `git add`
+## 7. Adding files and subfolders and their status — `git add` and `git status`
 
 At the moment, I only have two files inside `Projects/`, called `hello-world.py` and `hello-mars.py`. The content of each file is the following:
 * `hello-world.py`:
@@ -181,7 +180,7 @@ However, the price for these advantages is a steeper learning curve when compare
 
 Below, we will see other ways to commit objects "straight away", that is, without the necessity of doing `git add`, like when using `git commit -a`. However, at this point, it is important to remember that every single time you add a brand new object to the working directory, you have to `git add` it.
 
-## 8. Modifying added files before committing and `git diff`
+## 8. Modifying staged objects and comparing versions — `git diff`
 
 Modifying files is going to be part of your workflow — you are going to keep working on already indexed objects and add some new on your way. In this section, we will explain what happens when you modify an already-added-but-yet-committed file. We will continue with the previous example to make this more clear.
 
@@ -252,7 +251,7 @@ Changes to be committed:
 
 ```
 
-## 9. Committing files with `git commit`
+## 9. Committing objects — `git commit`
 
 As previously explained, committing allows `git` to store a "snapshot" of all the files added to the index — of all *staged* files in the repository. In this sense, a sequence of commits creates a history that can tell how your repository has evolved over time. To commit files, the `git commit` command is used. Given that we are ready to commit the two Python scripts of our example, let us proceed:
 ```bash
@@ -281,7 +280,7 @@ So far we have talked about objects' "id" and now of commits' "id". But why do t
 
 Finally, for practical purposes, `git` allows you to refer to any hashed object using a short SHA-1 value, which is the first 7 or 8 characters of the entire value. Given that each SHA-1 value is so different from the next one, 7 or 8 values are more than enough for `git` to identify which object you are referring to. If you are interested in how to use the SHA-1 value to refer to different objects in `git`, check out this [link](https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection).
 
-## 10. Excluding objects with `.gitignore`
+## 10. Excluding objects — `.gitignore`
 
 When working on your computer, you might have noticed that some applications (programs) might generate some temporary files. In a broader sense, sometimes our own workflow might generate objects that, because of their nature, are temporal or we just do not care about tracking them and even worse, getting them into our GitHub repository. 
 
@@ -384,7 +383,7 @@ If you want a fast way to learn how to write a `.gitignore` file, check out this
 
 Before moving over to the next section, don't forget to add the new files to the index with `git add *`.
 
-## 11. Making more commits and `git log`
+## 11. More commits and their log — `git log`
 
 So now you are a pro at adding files and, after adding those last objects to our working directory, we are ready to make our second commit. Let's proceed with that:
 ```bash
@@ -430,7 +429,7 @@ Finally, click on `Create repository`. Your new repository should look as follow
 
 <img src="https://ramd-public-bucket.s3.ca-central-1.amazonaws.com/tutorials-git-and-github-repo-created.png" alt='New repository just created' width=700>
 
-## 13. Setting up the remote repository with `git remote`
+## 13. Setting up the remote repository — `git remote`
 
 Now that your GitHub repository is ready, the following step is to configure your local repository so that it can "sync" with the one on GitHub.
 
@@ -450,7 +449,7 @@ origin	https://github.com/<Your GitHub Account>/example-repo.git (push)
 
 You can find more information about working with remote repositories [here](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes).
 
-## 14. Pushing and pulling with `git push` and `git pull`
+## 14. Pushing and pulling — `git push` and `git pull`
 
 The commands `git push` and `git pull` will be reviewed in this section. If you are "standing" *in* your local repository, the words *push* and *pull* become a bit more clear. `push` refers to the act of sending something *to* the remote repo, and `pull` to the act of getting something *from* the remote repo.
 
@@ -495,7 +494,7 @@ hello-mars.py	hello-world.py	temp-subfolder
 
 As seen above, there is no `README.md` nor License files. If the `git pull` were successful, we would see these files in our working directory. What we have to do now, is to make `git` "merge" these unrelated histories.
 
-## 15. Rebasing with `git pull --rebase`
+## 15. Rebasing on a remote branch — `git pull --rebase`
 
 In this section, we will use the `git pull --rebase` command to make both histories form a single and unified history.
 
@@ -561,7 +560,7 @@ We will not delve into all the `rebase` command can do, although there are some 
 
 Finally, you can find the official documention of `git push` [here](https://git-scm.com/docs/git-push), `git pull` [here](https://git-scm.com/docs/git-pull) (and `git pull --rebase` [here](https://git-scm.com/docs/git-pull#Documentation/git-pull.txt---rebasefalsetruemergespreserveinteractive)), and of `git rebase` [here](https://git-scm.com/docs/git-rebase).
 
-## 16. Knowing which branches are being tracked
+## 16. Knowing which branches are being tracked — `git branch`
 
 While we are not delving into branches in this tutorial, in this section we are still going to show how to identify which branches from a remote repository are being tracked — these are also called *remote-tracking* branches. The importance of this is quite simple: it enables us to start collaborating — say you and some friends are working on some common project together and you need to be sure you are pushing your commits to the right branch of the common repository (let's assume you are working with people that know branching). 
 
@@ -812,7 +811,7 @@ As a final note, in our example, setting upstream branches is a bit of an overki
 
 You can find documentation about `git push` [here](https://git-scm.com/docs/git-push) and about `git branch` [here](https://git-scm.com/docs/git-branch). In both cases, the flag `-u` stands for `--set-upstream`.
 
-## 18. Knowing which objects are being tracked and filtering them by their status
+## 18. Tracked objects and filtering by status — `git ls-files` and `git ls-tree`
 
 This is our final section. Here, we will show how to visualize the trees and files that `git` is tracking (and *not* tracking). As previously explained, once you initialize a `git` repository, `git` becomes able to "see" all objects in that working directory. Furthermore, once you add objects, `git` indexes the objects and tracks any changes you make to them. You can always decide not to track a file, or to exclude it by using `.gitignore`. However, as you start amassing more and more files, you might start losing "personal" track about what is being tracked and what not. For instance, you might want to know which files have been deleted or modified, or which files are not being tracked (because you manually removed them from the index or because they are being excluded by `.gitignore`). While you can always see all the files on your working directory (with `ls -a`), seeing the repository's objects requires a different set of commands.
 
@@ -923,27 +922,4 @@ As seen above, at the moment, all the `heads` are pointing to the same commit. T
 
 You can find the glossary definitions of both `HEAD` and `heads` [here](https://git-scm.com/docs/gitglossary.html#Documentation/gitglossary.txt-aiddefheadahead).
 
-
-```python
-!!jupyter nbconvert --to markdown '01 Quick and Easy Setup for Git and GitHub.ipynb'
-```
-
-
-
-
-    ['[NbConvertApp] Converting notebook 01 Quick and Easy Setup for Git and GitHub.ipynb to markdown',
-     '[NbConvertApp] Writing 67910 bytes to 01 Quick and Easy Setup for Git and GitHub.md']
-
-
-
-
-```python
-!!. md-formatter.sh '01 Quick and Easy Setup for Git and GitHub.md'
-```
-
-
-
-
-    ['[md-formatter] Markdown formatting successful on 01 Quick and Easy Setup for Git and GitHub.md']
-
-
+Formatting (GitHub flavor) passed and completed.

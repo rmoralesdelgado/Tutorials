@@ -3,7 +3,7 @@
 By Raul Morales Delgado.
 
 <h2>Contents<span class="tocSkip"></span></h2>
-<div class="toc"><ul class="toc-item"><li><span><a href="#1-Objective" data-toc-modified-id="1.-Objective-1">1. Objective</a></span></li><li><span><a href="#Scope" data-toc-modified-id="Scope-2">Scope</a></span></li><li><span><a href="#Introduction" data-toc-modified-id="Introduction-3">Introduction</a></span></li><li><span><a href="#Changing-the-shell-for-good" data-toc-modified-id="Changing-the-shell-for-good-4">Changing the shell for good</a></span></li><li><span><a href="#Installing-Xcode-Command-Line-Tools" data-toc-modified-id="Installing-Xcode-Command-Line-Tools-5">Installing Xcode Command Line Tools</a></span></li><li><span><a href="#Enabling-conda" data-toc-modified-id="Enabling-conda-6">Enabling conda</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#1-Objective" data-toc-modified-id="1.-Objective-1">1. Objective</a></span></li><li><span><a href="#2-Scope" data-toc-modified-id="2.-Scope-2">2. Scope</a></span></li><li><span><a href="#3-Introduction" data-toc-modified-id="3.-Introduction-3">3. Introduction</a></span></li><li><span><a href="#4-Changing-the-shell-for-good" data-toc-modified-id="4.-Changing-the-shell-for-good-4">4. Changing the shell for good</a></span></li><li><span><a href="#5-Installing-Xcode-Command-Line-Tools" data-toc-modified-id="5.-Installing-Xcode-Command-Line-Tools-5">5. Installing Xcode Command Line Tools</a></span></li><li><span><a href="#6-Enabling-conda" data-toc-modified-id="6.-Enabling-conda-6">6. Enabling conda</a></span></li></ul></div>
 
 ## 1. Objective
 

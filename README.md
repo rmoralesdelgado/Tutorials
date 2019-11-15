@@ -17,3 +17,7 @@ The objective of this tutorial is to show how to set up a Jupyter Notebook serve
 ## [03 Derivation of a Forward and a Backpropagation Pass on a Feedforward Neural Network](https://github.com/rmoralesdelgado/Tutorials/blob/master/03%20Derivation%20of%20a%20Forward%20and%20Backpropagation%20Pass%20on%20a%20Feedforward%20NN.pdf)
 
 The objective of this tutorial is to demonstrate, through thorough calculations, how to derive a forward pass and a backpropagation pass through a feedforward neural network (FFNN) of $n$ inputs, one hidden layer with $m$ nodes, and $p$ outputs. In this sense, this tutorial aims to be a general case application for any FFNN with a single hidden layer.
+
+## [04 Anaconda, zsh and MacOS Catalina](https://github.com/rmoralesdelgado/Tutorials/blob/master/04%20Conda%2C%20zsh%20and%20MacOS%20Catalina.md)
+
+The objective of this tutorial is to show how to *re-enable* command-line applications, namely those default in MacOS distributions like `git`, and user-installed Anaconda, that would not launch or work after installing MacOS Catalina and its new default shell, `zsh`.
